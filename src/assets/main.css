@@ -1,8 +1,11 @@
 @import './base.css';
 
-
 /* fonst config */
 @font-face {
   font-family: Plaguard-ZVnjx;
   src: url('../assets/fonts/Plaguard-ZVnjx.otf');
+}
+@font-face {
+  font-family: pricedow;
+  src: url('../assets/fonts/pricedow.ttf');
 }

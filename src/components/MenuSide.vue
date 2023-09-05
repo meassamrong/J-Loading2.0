@@ -1,102 +1,53 @@
-<script setup>
-import { RouterLink } from 'vue-router'
-</script>
 <template>
-    <div class="menu-side">
-        <div class="logo">
-            <img src="../assets/image/Enterprise-AI-landscape-2020-updated.jpg" alt="">
-        </div>
-        <div class="title" style="text-center; font-family: Plaguard-ZVnjx; font-size: 50px; text-align: center; background-color: #00cc6d; color: #ffff">
-            KHMER 90s Raching RP
-          </div>
-        <div class="menu-items">
-          <ul>
-            <li><RouterLink to="/">HOW TO PLAY</RouterLink></li>
-            <li><RouterLink to="/">CONTENT</RouterLink></li>
-            <li><RouterLink to="/">VIDEOS</RouterLink></li>
-            <li><RouterLink to="/">SUPPORTER</RouterLink></li>
-          </ul>
-        </div>
-    </div>
+  <div class="control-menu">
+    <ul>
+      <li><router-link to="/setting">Setting</router-link></li>
+      <li><router-link to="/racing">Racing</router-link></li>
+      <li><router-link to="/">HOME</router-link></li>
+    </ul>
+  </div>
 </template>
+<script>
+import { RouterLink } from 'vue-router'
+export default {
+  components: {
+    RouterLink
+  }
+}
+</script>
 <style scoped>
-
-.menu-side {
+.control-menu ul li .memu-active-page {
+  background-color: rgb(165, 165, 165);
+}
+.control-menu {
+  top: 50%;
+  left: -5%;
+  z-index: 999;
+  transform: rotate(-90deg) translate(0%, 0%);
   position: absolute;
-  z-index: 99;
-  height: 100vh;
-  width: 35%;
-  background-color: rgba(226, 195, 255, 0.397);
-  overflow: hidden;
 }
-.logo {
-  position: absolute;
-  left: 50%;
-  top: 15%;
-  height: 200px;
-  width: 200px;
-  border: solid 5px #00cc6d;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  transform: translate(-50%);
-  
-}
-.logo img {
-    height: 110%;
-    width: 110%;
-    padding: 0px;
-    margin: 0px;
-  }
-/* menu */
-.menu-items {
-  position: absolute;
-  top: 40%;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.menu-items:after {
-  content: "Development by J'Corp#5228";
-  position: absolute;
-  height: 200%;
-  top: 20px; right: -500%;
-  background: rgba(255,255,255,.8);
-  transform-origin: 54% 0;
-  transform: rotate(45deg);
-  z-index: -1;
-  animation: menu-itemsBg 1s ease-in forwards;
-}
-@keyframes menu-itemsBg {
-  from {
-    width: 1500%; 
-  }
-  to {
-    width: 1200%; 
-  }
-}
-.menu-items ul {
-  padding: 0px;
+.control-menu ul {
+  font-size: 0px;
   margin: 0px;
+  padding: 0px;
 }
-.menu-items ul li {
-  list-style-type: none;
+.control-menu ul li {
+  display: inline-block;
+  border: solid 1px #fff;
+  width: auto;
+  height: auto;
 }
-.menu-items ul li a {
+.control-menu ul li a {
+  font-size: 20px;
   display: block;
-  font-size: 35px;
-  font-family: Plaguard-ZVnjx;
+  padding: 10px 50px;
   text-decoration: none;
-  color: #00cc6d;
-  transition: all 0.2s;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.603);
+  transition: all 0.2s ease-in;
 }
-.menu-items ul li a:hover {
-  transform: scale(1.2);
-  
+.control-menu ul li a:hover {
+  background-color: rgb(165, 165, 165);
 }
-
 </style>

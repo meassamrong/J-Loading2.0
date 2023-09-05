@@ -1,0 +1,1 @@
+import{_ as s,f as t,g as o,q as c,s as a,k as n}from"./index-2f91a3de.js";const _={},d=e=>(c("data-v-1025bb2a"),e=e(),a(),e),i={class:"control-sencs"},p=d(()=>n("div",{class:"sencs-titles"},"This functions under maintenance!",-1)),r=[p];function l(e,u,f,h,b,v){return t(),o("div",i,r)}const S=s(_,[["render",l],["__scopeId","data-v-1025bb2a"]]);export{S as default};

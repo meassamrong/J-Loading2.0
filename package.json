@@ -14,10 +14,11 @@
     "gitart-vue-dialog": "^2.4.1",
     "howler": "^2.2.3",
     "jquery": "^3.7.0",
-    "swiper": "^9.4.1",
+    "swiper": "^10.0.4",
     "vue": "^3.2.36",
     "vue-audio-visual": "^3.0.5",
-    "vue-router": "^4.2.2"
+    "vue-router": "^4.2.2",
+    "vue-waveform": "^3.2.14"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",

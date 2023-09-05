@@ -4,14 +4,14 @@ game 'gta5'
 description "J'Corp Loading Screen"
 version '1.0.0'
 
-
 files {
-  'assets/**',
-  'html/*'
+  'dist/assets/**',
+  'dist/assets/**.*',
+  'dist/*'
 }
 
 loadscreen {
-  'html/index.html'
+  'dist/index.html'
 }
 
 loadscreen_cursor 'yes'

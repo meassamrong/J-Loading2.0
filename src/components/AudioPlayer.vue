@@ -1,55 +1,41 @@
 <template>
-  <div>
-    <audio ref="audioPlayer" :src="audioSource"></audio>
-
-    <button @click="togglePlayback">
-      {{ isPlaying ? 'Pause' : 'Play' }}
-    </button>
-
-    <input type="range" min="0" max="100" v-model="volume" @input="setVolume">
-
-    <canvas ref="visualizationCanvas"></canvas>
+  <div class="control-auto-player">
+    <audio ref="audio" autoplay loop></audio>
+    <vue-waveform :audio-element="audio" />
   </div>
 </template>
 
 <script>
+import VueWaveform from 'vue-waveform'
+import autoSources from '../assets/music/20OUTNOW.mp3'
 export default {
+  components: {
+    VueWaveform
+  },
   data() {
     return {
-      isPlaying: false,
-      volume: 50,
-      audioSource: 'path/to/audio.mp3',
-    };
-  },
-  methods: {
-    togglePlayback() {
-      if (this.isPlaying) {
-        this.pauseAudio();
-      } else {
-        this.playAudio();
-      }
-    },
-    playAudio() {
-      this.isPlaying = true;
-      this.$refs.audioPlayer.play();
-    },
-    pauseAudio() {
-      this.isPlaying = false;
-      this.$refs.audioPlayer.pause();
-    },
-    setVolume() {
-      this.$refs.audioPlayer.volume = this.volume / 100;
-    },
-  },
-  computed: {
-    visualization() {
-      // Generate audio visualization data
-      // Use Web Audio API or a library of your choice
-      // Return the generated visualization data
-    },
+      audio: null
+    }
   },
   mounted() {
-    // Render audio visualization using the computed property and the canvas element
+    this.audio = this.$refs.audio
+    // Load your audio file
+    this.audio.src = autoSources
+    this.audio.volume = 0.5
+    this.playAudio()
   },
-};
+  methods: {
+    playAudio() {
+      this.audio.play()
+    }
+  }
+}
 </script>
+<style scoped>
+.control-auto-player {
+  position: absolute;
+  z-index: 99;
+  bottom: 0px;
+  right: 0%;
+}
+</style>
