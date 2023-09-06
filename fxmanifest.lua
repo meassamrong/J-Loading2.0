@@ -6,8 +6,7 @@ version '1.0.0'
 
 files {
   'dist/assets/**',
-  'dist/assets/**.*',
-  'dist/*'
+  'dist/index.html'
 }
 
 loadscreen {

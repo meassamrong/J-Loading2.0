@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="control-progress">
     <div class="progressBar"></div>
   </div>
 </template>
@@ -48,19 +48,23 @@ export default {
 </script>
 
 <style scoped>
-.progressBar {
-  border-radius: 10px;
+.control-progress {
   z-index: 99;
   position: fixed;
+  background-color: #ffffff38;
+  border-radius: 10px;
   bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
-  height: 20px;
+  height: 15px;
   width: 500px;
-  /* Adjust as needed */
-  background-color: #ffffff38;
-  /* Adjust the color as needed */
-  transition: width 0.2s ease;
-  /* Adjust the animation speed as needed */
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+.progressBar {
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  width: 20%;
+  height: 100%;
 }
 </style>
