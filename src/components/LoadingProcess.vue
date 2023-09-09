@@ -64,7 +64,7 @@ export default {
 .progressBar {
   border-radius: 10px;
   transition: all 0.2s ease;
-  width: 20%;
   height: 100%;
+  background-color: orange;
 }
 </style>
