@@ -36,7 +36,7 @@ import { ref, watchEffect } from 'vue'
 export default {
   data() {
     return {
-      preloading: false
+      preloading: false,
     }
   },
   setup() {

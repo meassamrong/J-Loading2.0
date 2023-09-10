@@ -1,33 +1,40 @@
 <template>
   <div class="control-auto-player">
-    <audio ref="audio" autoplay loop></audio>
-    <vue-waveform :audio-element="audio" />
+    <audio ref="audio" loop></audio>
   </div>
 </template>
 
 <script>
-import VueWaveform from 'vue-waveform'
-import autoSources from '../assets/music/20OUTNOW.mp3'
+import twentyOutnow from '../assets/music/20OUTNOWc.mp3'
+import staywithme from '../assets/music/stayftme.mp3'
+import EyesMountainJDMDriftEdit from '../assets/music/EyesMountainJDMDriftEdit.mp3'
+import Sufferwithme from '../assets/music/Sufferwithme.mp3'
 export default {
-  components: {
-    VueWaveform
-  },
   data() {
     return {
-      audio: null
+      audio: null,
+      autoSources : [twentyOutnow, staywithme, EyesMountainJDMDriftEdit, Sufferwithme],
+      defaulsvolumes : 0.4
     }
   },
   mounted() {
     this.audio = this.$refs.audio
     // Load your audio file
-    this.audio.src = autoSources
-    this.audio.volume = 0.5
+    this.audio.volume = this.defaulsvolumes
+    this.randomeMusic()
     this.playAudio()
   },
   methods: {
     playAudio() {
       this.audio.play()
+    },
+    randomeMusic(){
+      this.audio.src = this.autoSources[Math.floor(Math.random() * this.autoSources.length)]
+    },
+    control_music(){
+      
     }
+    
   }
 }
 </script>

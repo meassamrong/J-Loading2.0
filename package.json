@@ -17,8 +17,7 @@
     "swiper": "^10.0.4",
     "vue": "^3.2.36",
     "vue-audio-visual": "^3.0.5",
-    "vue-router": "^4.2.2",
-    "vue-waveform": "^3.2.14"
+    "vue-router": "^4.2.2"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",

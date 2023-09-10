@@ -25,10 +25,10 @@ export default {}
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  border: solid 2px #fff;
+
   z-index: 1;
 }
-.sencs-backgroups {
+/* .sencs-backgroups {
   height: 100%;
   width: 100%;
   background-image: url('../assets/image/image3sea.jpg');
@@ -38,17 +38,20 @@ export default {}
   filter: blur(3px);
   z-index: -999;
   position: absolute;
-}
+} */
 .sencs-titls-home {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   color: orange;
   font-family: Plaguard-ZVnjx;
   text-shadow: 11px 9px 2px #9cb52bfb;
-  line-height: 70px;
+  line-height: 50px;
+  animation-name: textShadow;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
 }
 .sencs-titls-home span {
-  font-size: 4em;
+  font-size: 3em;
 }
 .control-logo {
   width: 100%;
@@ -57,9 +60,34 @@ export default {}
   margin: 50px 0px;
 }
 .control-logo img {
-  height: 250px;
+  height: 200px;
   border-radius: 50%;
   border: solid 4px orange;
+  animation-name: logoBorderAnimaion;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+}
+@keyframes logoBorderAnimaion {
+  0%{
+    border: solid 4px rgb(0, 255, 106);
+  }
+  50%{
+    border: solid 4px rgb(255, 94, 0);
+  }
+  100%{
+    border: solid 4px rgb(162, 0, 255);
+  }
+}
+@keyframes textShadow {
+  0%{
+    text-shadow: 11px 9px 2px rgb(0, 255, 106);
+  }
+  50%{
+    text-shadow: 11px 9px 2px rgb(255, 94, 0);
+  }
+  100%{
+    text-shadow: 11px 9px 2px rgb(162, 0, 255);
+  }
 }
 .control-buttons {
   text-align: center;
@@ -68,7 +96,7 @@ export default {}
 }
 .control-buttons button {
   border: none;
-  font-size: 45px;
+  font-size: 30px;
   color: #fff;
   padding: 10px 15px;
   border-radius: 8px;
